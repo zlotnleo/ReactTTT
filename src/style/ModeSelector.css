@@ -1,0 +1,27 @@
+.modeButton {
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.modeButton:hover {
+    background-color: white;
+    color: blue;
+}
+
+.modeButtonActive {
+    background-color: red;
+}
+
+.modeButtonActive:hover {
+    background-color: white;
+    color: red;
+}
+
+.modeSelector {
+    margin-bottom: 50px;
+}

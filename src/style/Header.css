@@ -1,0 +1,18 @@
+.header {
+    margin: 0 auto 30px;
+    width: fit-content;
+    height: 150px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+.headerLogo {
+    display: inline-block;
+    margin-right: 50px;
+    height: 100%;
+}
+
+.headerText {
+    display: inline-block;
+    font-size: 72pt;
+}

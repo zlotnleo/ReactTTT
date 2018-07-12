@@ -1,0 +1,13 @@
+.boardCell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 5px;
+}
+
+.noughtcross {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
