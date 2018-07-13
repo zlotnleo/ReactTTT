@@ -56,7 +56,8 @@ class App extends React.Component {
             board: BoardUtils.initBoard(),
             currentMode: newMode,
             activeDialog: undefined,
-            winState: undefined
+            winState: undefined,
+            currentPlayer: Player.CROSS
         }))
     }
 
