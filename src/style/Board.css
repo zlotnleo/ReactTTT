@@ -11,3 +11,11 @@
     height: 100%;
     display: block;
 }
+
+.selected .cross {
+    background-color: lightpink;
+}
+
+.selected .nought {
+    background-color: lightskyblue;
+}

@@ -17,7 +17,7 @@ class App extends React.Component {
             currentPlayer: Player.CROSS,
             currentMode: Mode.TWO_PLAYERS,
             activeDialog: undefined,
-            winner: undefined
+            winState: undefined
         };
     }
 
@@ -29,9 +29,18 @@ class App extends React.Component {
             let newBoard = BoardUtils.copyBoard(prevState.board);
             newBoard[row][col] = prevState.currentPlayer;
 
+            let winner = BoardUtils.getWinner(newBoard);
+            console.log(winner);
+            if(!winner) {
+                return {
+                    board: newBoard,
+                    currentPlayer: prevState.currentPlayer === Player.CROSS ? Player.NOUGHT : Player.CROSS
+                }
+            }
             return {
                 board: newBoard,
-                currentPlayer: prevState.currentPlayer === Player.CROSS ? Player.NOUGHT : Player.CROSS
+                currentPlayer: undefined,//prevState.currentPlayer,
+                winState: winner
             }
         });
     }
@@ -46,7 +55,8 @@ class App extends React.Component {
         this.setState(() => ({
             board: BoardUtils.initBoard(),
             currentMode: newMode,
-            activeDialog: undefined
+            activeDialog: undefined,
+            winState: undefined
         }))
     }
 
@@ -82,6 +92,7 @@ class App extends React.Component {
                     : <Board
                         board={this.state.board}
                         cellClicked={this.cellClicked.bind(this)}
+                        selectedSquares={this.state.winState ? this.state.winState.squares : undefined}
                     />
                 }
                 {this.state.activeDialog ? this.state.activeDialog : null}
