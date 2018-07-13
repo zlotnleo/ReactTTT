@@ -1,0 +1,32 @@
+.button {
+    width: 100px;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.button:hover {
+    background-color: white;
+    color: blue;
+}
+
+.buttonActive {
+    background-color: red;
+}
+
+.buttonActive:hover {
+    background-color: white;
+    color: red;
+}
+
+.buttonDisabled {
+    background-color: grey;
+}
+
+.buttonDisabled.buttonActive {
+    background-color: darkgray;
+}
